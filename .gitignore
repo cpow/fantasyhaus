@@ -20,6 +20,9 @@ db/*.sqlite3
 /log/*
 /tmp/*
 
+#rbenv stuff
+.rbenv-*
+
 # various artifacts
 **.war
 *.rbc
