@@ -29,3 +29,4 @@ group :test, :development do
   gem "pry-nav"
 end
 gem "heroku"
+gem "omniauth"
