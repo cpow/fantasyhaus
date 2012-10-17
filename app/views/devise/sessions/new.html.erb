@@ -1,6 +1,7 @@
 
 <div class="content offset2 span6">
   <h2>Sign in</h2>
+  <%= render "layouts/messages" %> 
 
   <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
     <div><%= f.label :email %><br />
