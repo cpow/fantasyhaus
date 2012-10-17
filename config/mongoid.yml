@@ -24,6 +24,7 @@ production:
   sessions:
     default:
       uri: <%= ENV['MONGOHQ_URL'] %>
+      database: fantasyhaus_production
     options:
       skip_version_check: true
       safe: true
