@@ -1,3 +1,4 @@
+ruby '1.9.3'
 source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 group :assets do
@@ -27,3 +28,4 @@ group :test, :development do
   gem "pry"
   gem "pry-nav"
 end
+gem "heroku"
