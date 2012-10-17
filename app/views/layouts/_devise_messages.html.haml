@@ -1,0 +1,5 @@
+-unless resource.errors.full_messages.blank?
+  %div{:class => "alert alert-error"}
+    %a.close{"data-dismiss" => "alert"} ×
+    - resource.errors.full_messages.uniq!.each do |msg|
+      = content_tag :div, msg, :id => "flash_error"
