@@ -1,4 +1,5 @@
-%h3 Home
-- @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+.hero-unit
+  %h1 FantasyHAUS
+  %p this is where your haus comes for sports and shit!
+  = link_to 'Login', new_user_session_path, :class => "btn btn-primary btn-large"
+  = link_to 'Sign Up!', new_user_registration_path, :class => "btn btn-success btn-large sign_up"
