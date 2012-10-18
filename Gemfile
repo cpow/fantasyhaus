@@ -30,3 +30,4 @@ group :test, :development do
 end
 gem "heroku"
 gem "omniauth"
+gem "omniauth-yahoo", :git => "https://github.com/timbreitkreutz/omniauth-yahoo.git"
