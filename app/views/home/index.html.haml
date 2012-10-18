@@ -1,9 +1,22 @@
 = render 'layouts/messages'
 .hero-unit
-  %h1 FantasyHAUS
-  %p this is where your haus comes for sports and shit!
+  %h1 All of your fantasy teams under one roof.
+  %p Fantasy Haus allows members to stream real-time fantasy scores and player news from the leading fantasy host sites such as ESPN, Yahoo and CBS Sports.
   - if user_signed_in?
     = link_to 'Edit account', edit_user_registration_path, :class => "btn btn-primary btn-large"
   - else
-    = link_to 'Sign In', new_user_session_path, :class => "btn btn-primary btn-large"
-    = link_to 'Sign Up!', new_user_registration_path, :class => "btn btn-success btn-large sign_up"
+    = link_to 'Free! Sign Up  »', new_user_registration_path, :class => "btn btn-primary btn-large sign_up"
+
+.row
+  .span4
+    %h2
+      =image_tag "nfl_logo.jpeg", :size => "80x80"
+    Stay informed with instant player and scoring updates from all of your fantasy football leagues. &nbsp;
+  .span4
+    %h2
+      =image_tag "mlb_logo.jpeg", :size => "150x150"
+    Do you hate updating your lineups each day on different sites? &nbsp;Fantasy Haus is your answer. &nbsp;Update your lineups, check your scores and view player notes from all of your fantasy baseball leagues.
+  .span4
+    %h2
+      =image_tag "nhl_logo.gif", :size => "80x80"
+    Fantasy Haus provides scoring and player updates for all of your intense fantasy hockey action. &nbsp; 
