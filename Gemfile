@@ -27,6 +27,9 @@ gem "quiet_assets", ">= 1.0.1", :group => :development
 group :test, :development do
   gem "pry"
   gem "pry-nav"
+  gem "pry-remote"
+  gem "guard"
+  gem "guard-rspec"
 end
 gem "heroku"
 gem "omniauth"

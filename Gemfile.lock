@@ -80,6 +80,12 @@ GEM
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
     ffi (1.1.5)
+    guard (1.4.0)
+      listen (>= 0.4.2)
+      thor (>= 0.14.6)
+    guard-rspec (2.1.0)
+      guard (>= 1.1)
+      rspec (~> 2.11)
     haml (3.1.7)
     haml-rails (0.3.5)
       actionpack (>= 3.1, < 4.1)
@@ -107,6 +113,7 @@ GEM
       addressable (~> 2.3)
     libwebsocket (0.1.5)
       addressable
+    listen (0.5.3)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -142,6 +149,9 @@ GEM
       slop (~> 3.3.1)
     pry-nav (0.2.2)
       pry (~> 0.9.10)
+    pry-remote (0.1.6)
+      pry (~> 0.9)
+      slop (~> 3.0)
     quiet_assets (1.0.1)
       railties (~> 3.1)
     rack (1.4.1)
@@ -234,6 +244,8 @@ DEPENDENCIES
   devise (>= 2.1.2)
   email_spec (>= 1.2.1)
   factory_girl_rails (>= 4.1.0)
+  guard
+  guard-rspec
   haml (>= 3.1.7)
   haml-rails (>= 0.3.5)
   heroku
@@ -245,6 +257,7 @@ DEPENDENCIES
   omniauth-yahoo!
   pry
   pry-nav
+  pry-remote
   quiet_assets (>= 1.0.1)
   rails (= 3.2.8)
   rolify (>= 3.2.0)

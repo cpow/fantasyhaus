@@ -1,4 +1,6 @@
 Fantasyhaus::Application.routes.draw do
+  match '/auth/:provider/callback' => "authentications#create"
+  resources :authentications
   authenticated :user do
     root :to => 'home#index'
   end
