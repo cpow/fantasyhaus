@@ -5,4 +5,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_path, :alert => exception.message
   end
 
+  def after_sign_in_path_for(resource)
+    user_dashboard_index_path(resource)
+  end
 end

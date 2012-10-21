@@ -18,7 +18,6 @@ gem "capybara", ">= 1.1.2", :group => :test
 gem "database_cleaner", ">= 0.9.1", :group => :test
 gem "mongoid-rspec", ">= 1.4.6", :group => :test
 gem "email_spec", ">= 1.2.1", :group => :test
-gem "factory_girl_rails", ">= 4.1.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.1.0.0"
 gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
@@ -30,7 +29,9 @@ group :test, :development do
   gem "pry-remote"
   gem "guard"
   gem "guard-rspec"
+  gem 'rb-fsevent', '~> 0.9.1'
 end
+gem "factory_girl_rails", ">= 4.1.0", :group => :test
 gem "heroku"
 gem "omniauth"
 gem "omniauth-yahoo", :git => "https://github.com/timbreitkreutz/omniauth-yahoo.git"
