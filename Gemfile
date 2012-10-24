@@ -35,3 +35,4 @@ gem "factory_girl_rails", ">= 4.1.0", :group => :test
 gem "heroku"
 gem "omniauth"
 gem "omniauth-yahoo", :git => "https://github.com/timbreitkreutz/omniauth-yahoo.git"
+gem "oauth"

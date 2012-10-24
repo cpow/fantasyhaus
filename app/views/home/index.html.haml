@@ -3,7 +3,7 @@
   %h1 All of your fantasy teams under one roof.
   %p Fantasy Haus allows members to stream real-time fantasy scores and player news from the leading fantasy host sites such as ESPN, Yahoo and CBS Sports.
   - if user_signed_in?
-    = link_to 'Edit account', edit_user_registration_path, :class => "btn btn-primary btn-large"
+    = link_to 'Dashboard', user_dashboard_index_path(current_user), :class => "btn btn-primary btn-large"
   - else
     = link_to 'Free! Sign Up  »', new_user_registration_path, :class => "btn btn-primary btn-large sign_up"
 

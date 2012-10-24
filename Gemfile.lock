@@ -254,6 +254,7 @@ DEPENDENCIES
   jquery-rails
   mongoid (>= 3.0.9)
   mongoid-rspec (>= 1.4.6)
+  oauth
   omniauth
   omniauth-yahoo!
   pry
