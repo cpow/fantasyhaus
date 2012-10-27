@@ -1,6 +1,5 @@
 class AuthenticationsController < ApplicationController
   def create
-    binding.pry
     auth = request.env["omniauth.auth"] 
     current_user.yahoo_auths.create(
       provider: auth['provider'], 
