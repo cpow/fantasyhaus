@@ -6,4 +6,18 @@ class YahooAuth
   field :uid, type: String
   field :token, type: String
   field :secret, type: String
+
+  def access_token
+    consumer.new_access_token
+  end
+
+  def league
+   access_token.request(:get, "http://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1/games;game_keys=273/leagues")    
+  end
+
+  private
+
+    def consumer
+      ApiConsumer::YahooConsumer.new(self)
+    end
 end

@@ -23,6 +23,7 @@ gem "devise", ">= 2.1.2"
 gem "cancan", ">= 1.6.8"
 gem "rolify", ">= 3.2.0"
 gem "quiet_assets", ">= 1.0.1", :group => :development
+gem "nokogiri"
 group :test, :development do
   gem "pry"
   gem "pry-nav"

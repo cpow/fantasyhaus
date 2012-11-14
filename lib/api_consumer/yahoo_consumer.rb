@@ -7,12 +7,12 @@ module ApiConsumer
 
     attr_reader :auth
 
-    def initialize(auth)
-      @auth = YahooAuth.new(auth.attributes)
+    def initialize auth
+      @auth = YahooAuth.new auth.attributes
     end
 
     def new_access_token
-      access_token_from_hash(consumer, token_hash)
+      access_token_from_hash consumer, token_hash
     end
 
     def token_hash
