@@ -5,5 +5,8 @@ FactoryGirl.define do
     user_id 1
     provider "MyString"
     uid "MyString"
+    token "TokenString"
+    secret "SecretString"
+    session_handle "SessionString"
   end
 end

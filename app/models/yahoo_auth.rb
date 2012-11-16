@@ -11,7 +11,7 @@ class YahooAuth
   before_create :save_time
 
   def expired?
-    self.access_token_expiration >= DateTime.now
+    self.access_token_expiration >= DateTime.now - 2.minutes
   end
 
   def access_token
