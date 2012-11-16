@@ -40,9 +40,6 @@ class YahooAuth
 
   def players
     player_names = []
-    league = access_token.request(:get, "http://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1/games;game_keys=273/leagues")
-    doc = REXML::Document.new(league.body)
-    doc.root.elements[1].elements['user[1]/games/game/leagues/league/name'].text
     output = access_token.request(:get, "http://fantasysports.yahooapis.com/fantasy/v2/team/273.l.408688.t.8/players")
     doc = REXML::Document.new(output.body)
     doc.root.each_element('//player/name/full'){|name| player_names << name.text}
