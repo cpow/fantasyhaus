@@ -1,3 +1,7 @@
+defaults: &defaults
+  use_utc: false
+  use_activesupport_time_zone: true
+
 development:
   sessions:
     default:
@@ -27,3 +31,4 @@ production:
       options:
         skip_version_check: true
         safe: true
+

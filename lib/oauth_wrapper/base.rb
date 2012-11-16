@@ -8,7 +8,7 @@ module OauthWrapper
       OAuth::AccessToken.from_hash(consumer, token_hash)
     end
 
-    def request_token(auth_object)
+    def create_request_token(opts)
       OAuth::RequestToken.new(opts[:consumer], opts[:oauth_token], opts[:oauth_token_secret])
     end
   end
