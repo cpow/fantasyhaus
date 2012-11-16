@@ -12,5 +12,9 @@
   %strong Leagues:
   -@leagues.each do |league|
     League:
-    =league.body
+    =league
+    %br
+  %strong Players:
+  -@players.each do |player|
+    =player
     %br
