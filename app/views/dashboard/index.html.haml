@@ -1,20 +1,12 @@
 %div
   =render "layouts/messages"
-  %h1 Hello!!! 
+  %ul.breadcrumb
+    %li 
+      %a(href="www.google.com") Hello!!! 
   =@user.name
-  %br/
-  =link_to "sign into yahoo", "/auth/yahoo"
-  %br/
-  -@authentications.each do |auth|
-    Yahoo Guid:
-    =auth.uid
   %br
-  %strong Leagues:
-  -@leagues.each do |league|
-    League:
-    =league
-    %br
-  %strong Players:
-  -@players.each do |player|
-    =player
-    %br
+
+  %br
+  -@authentications.each_with_index do |auth, i|
+    =render :partial => "leagues", :locals => {index: i}
+  

@@ -1,0 +1,21 @@
+.row-fluid.sortable.ui-sortable
+  .box.span12
+    .box-header
+      %span{:class => "break"}
+        =@leagues[index]
+    .box-content
+      %strong Players:
+      %table.table.table-striped.table-bordered.bootstrap-datatable.datatable
+        %thead
+          %tr
+            %th Name
+            %th Position
+            %th Status
+            %th Points(total)
+        %tbody
+          -@players[index].each do |player|
+            %tr
+              %td=player
+              %td hi
+              %td hi
+              %td hi

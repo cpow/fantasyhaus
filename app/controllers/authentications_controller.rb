@@ -12,8 +12,4 @@ class AuthenticationsController < ApplicationController
     flash[:notice] = "Authentication successful."
     redirect_to user_dashboard_index_path(current_user)
   end
-
-  def index
-    @authentications = current_user.yahoo_auths if current_user
-  end
 end

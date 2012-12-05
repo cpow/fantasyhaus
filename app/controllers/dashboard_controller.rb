@@ -1,12 +1,11 @@
 class DashboardController < ApplicationController
   def index
-    @leagues = []
     @players = []
     @user = User.find params[:user_id]
     @authentications = @user.yahoo_auths
-    @authentications.each do |auth|
-      @leagues << auth.league
-    @players = @authentications.first.players if @authentications
+    @authentications.each_with_index do |auth, i|
+      @leagues = auth.leagues
+      @players[i] = auth.players
     end
   end
 end

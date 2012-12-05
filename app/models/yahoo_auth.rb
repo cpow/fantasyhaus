@@ -1,6 +1,7 @@
 class YahooAuth
   include Mongoid::Document
   belongs_to :user
+
   field :user_id, type: String
   field :provider, type: String
   field :uid, type: String
@@ -32,18 +33,12 @@ class YahooAuth
     oauth_wrapper.consumer
   end
 
-  def league
-    output = access_token.request(:get, "http://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1/games;game_keys=273/leagues")
-    doc = REXML::Document.new(output.body)
-    doc.root.elements[1].elements['user[1]/games/game/leagues/league/name'].text
+  def leagues
+    yahoo_fantasy.leagues 273
   end
 
   def players
-    player_names = []
-    output = access_token.request(:get, "http://fantasysports.yahooapis.com/fantasy/v2/team/273.l.408688.t.8/players")
-    doc = REXML::Document.new(output.body)
-    doc.root.each_element('//player/name/full'){|name| player_names << name.text}
-    return player_names
+    yahoo_fantasy.players
   end
 
   protected
@@ -52,9 +47,17 @@ class YahooAuth
     self.access_token_expiration = Time.zone.now + 60.minutes
   end
 
+  def save_leagues
+    Nfl::League.check_and_save self
+  end
+
   private
 
     def oauth_wrapper
       OauthWrapper::Yahoo.new(self)
+    end
+
+    def yahoo_fantasy
+      YahooFantasy::Nfl.new(self)
     end
 end
